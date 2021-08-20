@@ -9,3 +9,13 @@ function filterOutOdds() {
 // Refactor to use rest op and arrow func
 const filterOutOdds = (...args) => args.filter((nums) => nums % 2 === 0);
 
+//
+// findMin
+const findMin = (...args) => Math.min(args);
+
+//
+// mergeObjects
+const mergeObjects = (arg1, arg2) => ({ ...arg1, ...arg2 });
+
+//
+// doubleAndReturnArgs
