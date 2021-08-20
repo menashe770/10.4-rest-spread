@@ -19,3 +19,13 @@ const mergeObjects = (arg1, arg2) => ({ ...arg1, ...arg2 });
 
 //
 // doubleAndReturnArgs
+const doubleAndReturnArgs = (arr, ...args) => [
+  ...arr,
+  ...args.map((x) => x * 2),
+];
+
+//
+// Slice and Dice!
+
+// removeRandom
+const removeRandom = (items) => 
