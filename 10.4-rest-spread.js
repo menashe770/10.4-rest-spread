@@ -1,4 +1,4 @@
-// Refactor to use rest op and arrow func
+// filterOutOdds
 const filterOutOdds = (...args) => args.filter((nums) => nums % 2 === 0);
 
 //
@@ -17,17 +17,20 @@ const doubleAndReturnArgs = (arr, ...args) => [
 ];
 
 //
-
 // Slice and Dice
 // removeRandom
-// const removeRandom = (items) => {
-//   let removedIdx = Math.floor(Math.random() * items.length);
-//   console.log('removed item:', items[removedIdx]);
-//   return [...items.slice(0, removedIdx), ...items.slice(removedIdx + 1)];
-// };
-
 const removeRandom = (items) => {
   let removedIdx = Math.floor(Math.random() * items.length);
   console.log('Removed item:', items[removedIdx]);
   return [...items.slice(0, removedIdx), ...items.slice(removedIdx + 1)];
 };
+
+//
+// extend
+const extend = (array1, array2) => {
+  return [...array1, ...array2];
+};
+
+//
+// addKeyVal
+const addKeyVal = (obj, key, val) => {};
