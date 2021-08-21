@@ -1,11 +1,3 @@
-// Given
-function filterOutOdds() {
-  var nums = Array.prototype.slice.call(arguments);
-  return nums.filter(function (num) {
-    return num % 2 === 0;
-  });
-}
-
 // Refactor to use rest op and arrow func
 const filterOutOdds = (...args) => args.filter((nums) => nums % 2 === 0);
 
@@ -25,7 +17,17 @@ const doubleAndReturnArgs = (arr, ...args) => [
 ];
 
 //
-// Slice and Dice!
 
+// Slice and Dice
 // removeRandom
-const removeRandom = (items) => 
+// const removeRandom = (items) => {
+//   let removedIdx = Math.floor(Math.random() * items.length);
+//   console.log('removed item:', items[removedIdx]);
+//   return [...items.slice(0, removedIdx), ...items.slice(removedIdx + 1)];
+// };
+
+const removeRandom = (items) => {
+  let removedIdx = Math.floor(Math.random() * items.length);
+  console.log('Removed item:', items[removedIdx]);
+  return [...items.slice(0, removedIdx), ...items.slice(removedIdx + 1)];
+};
