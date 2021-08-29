@@ -37,12 +37,16 @@ const extend = (array1, array2) => {
 const addKeyVal = (obj, key, val) => {
   let newObj = { ...obj };
   obj[key] = val;
-  return newObj
+  return newObj;
 };
 
 //
 /** Return a new object with a key removed. */
-const removeKey = (obj, key) => {};
+const removeKey = (obj, key) => {
+  let newObj = { ...obj };
+  delete newObj[key];
+  return newObj;
+};
 
 /** Combine two objects and return a new object. */
 function combine(obj1, obj2) {}
